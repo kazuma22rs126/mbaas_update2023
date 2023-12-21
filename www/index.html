@@ -70,10 +70,10 @@
         }
 
         function sortData2() {
-            UTdata.order(key, true).fetchAll()
+            UTdata.order(key, false).fetchAll()
                 .then(function(results) {
                     let msg = "";
-                    for (let i = 5; i > results.length; i--) {
+                    for (let i = 0; i < results.length; i++) {
                         msg += results[i].get(key) + "<br>";
                     }
                     $("#display").removeClass();
